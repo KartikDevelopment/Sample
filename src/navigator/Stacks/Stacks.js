@@ -26,7 +26,8 @@ const navigationProps = {
 export const HomeNavigator = () => (
   <Stack.Navigator
     initialRouteName="Home"
-    headerMode="screen"
+    headerMode="none"
+    //headerMode='screen'
     screenOptions={navigationProps}
   >
     <Stack.Screen
@@ -34,8 +35,8 @@ export const HomeNavigator = () => (
       component={Home}
       options={({ navigation }) => ({
         title: 'Home',
-        headerLeft: () => <HeaderLeft navigation={navigation} />,
-        headerTitle: () => <HeaderTitle />,
+        //headerLeft: () => <HeaderLeft navigation={navigation} />,
+        // headerTitle: () => <HeaderTitle />,
       })}
     />
     <Stack.Screen
@@ -43,8 +44,8 @@ export const HomeNavigator = () => (
       component={Details}
       options={({ navigation }) => ({
         title: 'Home',
-        headerLeft: () => <HeaderLeft navigation={navigation} />,
-        headerTitle: () => <HeaderTitle />,
+        //headerLeft: () => <HeaderLeft navigation={navigation} />,
+        // headerTitle: () => <HeaderTitle />,
       })}
     />
   </Stack.Navigator>

@@ -3,9 +3,9 @@ import { NavigationContainer } from '@react-navigation/native'
 import { Text } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import { authenticate } from 'slices/app.slice'
-
+import { HomeNavigator } from './Stacks'
 import DrawerNavigator from './Drawer'
-
+import Tabs from './Tabs'
 const Navigator = () => {
   const { checked, loggedIn } = useSelector((state) => state.app)
   const dispatch = useDispatch()
@@ -19,7 +19,7 @@ const Navigator = () => {
 
   return checked ? (
     <NavigationContainer>
-      <DrawerNavigator />
+      <HomeNavigator />
     </NavigationContainer>
   ) : (
     <Text>Loading...</Text>
